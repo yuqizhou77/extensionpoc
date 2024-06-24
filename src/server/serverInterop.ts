@@ -14,5 +14,5 @@ export async function connectToServer() {
     connection.listen();
 
     let notification = new rpc.NotificationType<string>('testNotification');
-    connection.sendNotification(notification, 'Hello World');
+    await connection.sendNotification(notification, 'Hello World');
 }
